@@ -3,6 +3,7 @@ package kr.co.tjoeun.a20200317_03_androidfuntion01;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -21,13 +22,22 @@ public class MainActivity extends AppCompatActivity {
            @Override
            public void onClick(View v) {
 
+//               FirstActivity로 이동하자!
+               Intent intent = new Intent(MainActivity.this, FirstActivity.class);
+               startActivity(intent);
+
+
 
            }
        });
 
-       binding.goToSecondBtn.setOnClickListener(new View.OnClickListener() {
-           @Override
+                   binding.goToSecondBtn.setOnClickListener(new View.OnClickListener() {
+               @Override
            public void onClick(View v) {
+
+//               SecondActivity로 이동하자
+                   Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                   startActivity(intent);
 
            }
        });
